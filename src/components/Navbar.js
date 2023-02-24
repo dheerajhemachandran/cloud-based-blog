@@ -11,7 +11,7 @@ const Navbar = () => {
   const signout=()=>{
     signOut(auth).then(()=>{
       localStorage.clear()
-      navigate("/")
+      navigate("/login")
     })
 
   }
@@ -23,19 +23,20 @@ const Navbar = () => {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarNav">
-      <ul className="navbar-nav ms-auto me-4">
+      <ul className="navbar-nav ms-auto me-4 gap-3">
         
-        {auth.currentUser?
+        {localStorage.getItem("isauth")?
         <>
         <li className="nav-item">
-          <Link className="nav-link" to="/feed">Home</Link>
+          <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="dropdown nav-item">
           <button className="dropdown-toggle btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            {auth.currentUser.displayName}
+            {localStorage.getItem("isauth")}
           </button>
         <ul className="dropdown-menu">
           <li><Link className="dropdown-item" to="/profile">My Profile</Link></li>
+          <li><Link className="dropdown-item" to="/post">My Posts</Link></li>
           <li><button className="dropdown-item" onClick={signout}>Logout</button></li>
         </ul>
       </li>
@@ -46,7 +47,7 @@ const Navbar = () => {
           <Link className="nav-link" to="/signup">Register</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">Log-in</Link>
+          <Link className="nav-link" to="/login">Log-in</Link>
         </li>
         </>}
       </ul>

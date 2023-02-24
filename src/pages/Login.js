@@ -13,17 +13,16 @@ const Login = () => {
     const password=(e.target.password.value)
 
     signInWithEmailAndPassword(auth,email, password).then(function(user) {
-      
-      navigate("/feed")
+      localStorage.setItem("isauth",auth.currentUser.displayName)
+      navigate("/")
       }).catch(function(error) {
        });
-        localStorage.setItem("isauth",true)
   }
 
   const signInWithGoogle=()=>{
     signInWithPopup(auth,provider).then((result)=>{
-        localStorage.setItem("isauth",true)
-        navigate("/feed")
+        localStorage.setItem("isauth",auth.currentUser.displayName)
+        navigate("/")
     })
   }
 

@@ -13,11 +13,11 @@ const Signup = () => {
 
     createUserWithEmailAndPassword(auth,email, password).then(function(user) {
       updateProfile(auth.currentUser,{ displayName: name }).then(function() {
-        
+        localStorage.setItem("isauth",auth.currentUser.displayName)
+        navigate("/feed")
         }).catch(function(error) {
        });
-        localStorage.setItem("isauth",true)
-        navigate("/feed")
+        
     }).catch(function(error) {
       });
     
@@ -28,7 +28,7 @@ const Signup = () => {
   const signInWithGoogle=()=>{
     signInWithPopup(auth,provider).then((result)=>{
         
-        localStorage.setItem("isauth",true)
+        localStorage.setItem("isauth",auth.currentUser.displayName)
         navigate("/feed")
     })}
 
