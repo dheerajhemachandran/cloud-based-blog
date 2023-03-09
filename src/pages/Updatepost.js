@@ -30,10 +30,10 @@ const Updatepost = ({id}) => {
   return (
     <div className='d-flex flex-column justify-content-center align-items-center py-5 my-5'>
         
-        <div class="card mb-5" style={{width:"80vw"}}>
-        <div class="card-body">
-            <h5 class="card-title">{id.data.title}</h5>
-            <p class="card-text mt-3">{id.data.content}</p>
+        <div className="card mb-5" style={{width:"80vw"}}>
+        <div className="card-body">
+            <h5 className="card-title">{id.data.title}</h5>
+            <p className="card-text mt-3">{id.data.content}</p>
             </div>
         </div>
 

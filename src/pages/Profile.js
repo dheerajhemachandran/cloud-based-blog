@@ -3,6 +3,7 @@ import { auth } from '../firebase/Firebase.config'
 import { Link } from 'react-router-dom'
 
 const Profile = () => {
+  console.log(auth.currentUser)
   return (
     <div className='flex justify-center items-center'>
     {auth.currentUser?  

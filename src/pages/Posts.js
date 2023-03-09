@@ -55,10 +55,10 @@ const Posts = ({setid}) => {
         </div>
         {post?
         <div className='mx-5 px-5'>
-            {data.map((post)=>{
+            {data.map((post,index)=>{
                 if(post.data.author===auth.currentUser.uid)
                 {
-                    return(<Post post={post} setid={setid}/>)
+                    return(<Post key={index} post={post} setid={setid}/>)
                 }
                 return null
             }
@@ -66,11 +66,11 @@ const Posts = ({setid}) => {
             {data.length===0?<div className='text-primary'>No post yet!!!</div>:<></>}
         </div>
         :
-        <form className='d-flex flex-column' onSubmit={Handlesubmit}>
+        <form className='d-flex flex-column' style={{width:"80vw"}} onSubmit={Handlesubmit}>
             <label className='form-label'>Title:</label>
             <textarea className='form-control mb-3 border border-primary' name='title' placeholder='title'></textarea>
             <label className='form-label'>Content</label>
-            <textarea className='form-control border border-primary mb-3' name='content' placeholder='type thecontent here'/>
+            <textarea className='form-control border border-primary mb-3' name='content' placeholder='type thecontent here' style={{height:"280px"}}/>
             <button className='btn btn-primary' type='submit'>Create</button>
         </form>}
 
