@@ -29,8 +29,8 @@ const Login = () => {
 
 
   return (
-    <div className='d-flex flex-column justify-content-center align-items-center'>
-      <form className='my-5 py-5 d-flex flex-column' onSubmit={handlesubmit}>
+    <div className='d-flex flex-column justify-content-center align-items-center py-5'>
+      <form className='my-5 p-5 rounded text-white d-flex flex-column bg-dark bg-gradient' onSubmit={handlesubmit}>
         <div className="mb-3 fw-bold fs-3 text-center text-primary">Log-in</div>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">email</label>

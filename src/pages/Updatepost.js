@@ -28,17 +28,17 @@ const Updatepost = ({id}) => {
     }
 
   return (
-    <div className='d-flex flex-column justify-content-center align-items-center py-5 my-5'>
+    <div className='d-flex flex-column justify-content-center align-items-center p-5 m-5'>
         
-        <div className="card mb-5" style={{width:"80vw"}}>
+        <div className="card mb-5 bg-dark bg-gradient rounded text-white" style={{width:"80vw"}}>
         <div className="card-body">
             <h5 className="card-title">{id.data.title}</h5>
             <p className="card-text mt-3">{id.data.content}</p>
             </div>
         </div>
 
-        <div className='my-5 fs-3'>Enter the new details below</div>
-        <form className='d-flex flex-column' style={{width:"80vw"}} onSubmit={Handlesubmit} >
+        <div className='my-5 fs-3  bg-dark bg-gradient rounded text-white p-2'>Enter the new details below</div>
+        <form className='d-flex flex-column align-items-center bg-dark bg-gradient rounded text-white p-4' style={{width:"80vw"}} onSubmit={Handlesubmit} >
             <label className='form-label'>Title:</label>
             <textarea className='form-control mb-3 border border-primary' name='title' placeholder='title'>{id.data.title}</textarea>
             <label className='form-label'>Content</label>

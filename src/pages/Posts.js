@@ -66,11 +66,11 @@ const Posts = ({setid}) => {
             {data.length===0?<div className='text-primary'>No post yet!!!</div>:<></>}
         </div>
         :
-        <form className='d-flex flex-column align-items-start rounded bg-light bg-gradient bg-opacity-75 p-5' style={{width:"80vw"}} onSubmit={Handlesubmit}>
+        <form className='d-flex flex-column align-items-start rounded bg-dark text-white bg-gradient p-5' style={{width:"80vw"}} onSubmit={Handlesubmit}>
             <label className='form-label fw-bolder '>Title:</label>
-            <textarea className='form-control mb-3 border border-primary bg-dark bg-gradient bg-opacity-75 text-white' name='title' placeholder='title'></textarea>
+            <textarea className='form-control mb-3 border border-primary' name='title' placeholder='title'></textarea>
             <label className='form-label fw-bolder'>Content</label>
-            <textarea className='form-control border border-primary mb-3 bg-dark bg-gradient bg-opacity-75 text-white' name='content' placeholder='type thecontent here' style={{height:"280px"}}/>
+            <textarea className='form-control border border-primary mb-3' name='content' placeholder='type thecontent here' style={{height:"280px"}}/>
             <button className='btn btn-primary' type='submit'>Create</button>
         </form>}
 

@@ -13,6 +13,7 @@ function App() {
   const [id, setid] = useState()
   return (
     <Router>
+      <div className='background'></div>
       <Navbar/>
       <Routes>
         <Route path="/" element={<Feed setid={setid}/>}/>

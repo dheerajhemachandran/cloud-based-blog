@@ -71,7 +71,7 @@ const Post = ({post,setid}) => {
 
 
   return (
-    <div className="card mb-5 bg-dark bg-gradient bg-opacity-75 text-white" style={{width:"80vw"}}>
+    <div className="card mb-5 bg-dark bg-gradient text-white" style={{width:"80vw"}}>
     <div className="card-body">
       <h5 className="card-title">{post.data.title}</h5>
       {path==="/"?<p>author:<span className='text-primary fw-bold ms-2'>{post.data.aname}</span></p>:<></>}

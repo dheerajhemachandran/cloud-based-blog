@@ -30,7 +30,7 @@ const Feed = ({setid}) => {
     {data.map((post,index)=>{return(<Post setid={setid} post={post} key={index}/>)})}
   </div>
   :
-  <Link className='bg-dark bg-gradient bg-opacity-50' to="/login">please sign in to view content</Link>}
+  <Link className='bg-dark bg-gradient p-3' to="/login">please sign in to view content</Link>}
   </div>
   )
 }
