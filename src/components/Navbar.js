@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-dark navbar-dark px-lg-5 px-3 py-2">
   <div className="container-fluid px-lg-5 mx-lg-5">
-    <div className="navbar-brand">C-Blog</div>
+    <div className="navbar-brand"> welcome {localStorage.getItem("isauth")}</div>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
